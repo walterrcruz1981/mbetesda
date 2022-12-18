@@ -1,0 +1,236 @@
+.somosContainer {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    .side-link {
+        position: fixed;
+        right: 0;
+        top: 40%;
+        text-align: right;
+        backdrop-filter: blur(10px);
+        background-color: #0099ff8b;
+        margin: 0 1em;
+        padding: 1em;
+        box-shadow: -2px -2px 20px;
+        width: 14%;
+        height: 30%;
+        color: #ffffff;
+        text-overflow: none;
+        z-index: 100;
+        transition: all 1s;
+
+        a {
+            font-size: small;
+            color: #ffffff;
+        }
+
+        .close-button {
+            position: absolute;
+            left: .5em;
+            bottom: 45%;
+            cursor: pointer;
+        }
+    }
+
+    .close-side-link {
+        right: -1em;
+        width: 6%;
+        cursor: pointer;
+
+        h3,
+        h4,
+        h5,
+        hr,
+        a {
+            opacity: 0;
+            transition: all 500ms ease-in-out;
+        }
+    }
+
+    .videoContainer {
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        position: relative;
+        margin: 0 auto;
+
+        iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            right: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+        .videoContainer iframe {
+            /* height = 100 * (9 / 16) = 56.25 */
+            height: 56.25vw;
+        }
+    }
+
+    @media (max-aspect-ratio: 16/9) {
+        .videoContainer iframe {
+            /* width = 100 / (9 / 16) = 177.777777 */
+            width: 177.78vh;
+        }
+    }
+
+    .hero {
+        padding: 1em;
+        height: 10%;
+        position: absolute;
+        top: 18%;
+        left: 30%;
+        z-index: 100;
+        color: white;
+        border-radius: 10px;
+        background-color: rgba(50, 50, 99, 0.767);
+
+        span {
+            font-size: 3rem;
+        }
+
+        img {
+            z-index: -1;
+            object-fit: cover;
+        }
+
+    }
+
+    .fancyAccordion {
+        height: 60em;
+        margin: 2em 0;
+        background: linear-gradient(to right, #c7c7ff, white, #d4ffdb5f);
+        border-radius: 10px;
+
+        .container {
+            position: relative;
+            border-radius: 1em;
+            gap: 1em;
+            overflow: hidden;
+            height: 40em;
+            width: 90%;
+            margin: 0 auto;
+            z-index: 1;
+
+            img {
+                z-index: -1;
+                object-fit: cover;
+            }
+
+            .buttons {
+                flex-direction: column;
+                padding: 1em;
+                margin: 1em;
+                z-index: 1;
+
+                .button {
+                    background-color: white;
+                    width: 220px;
+                    padding: 1.5em 2em;
+                    height: 3em;
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                    letter-spacing: 3px;
+                    margin: 1px 0;
+                    word-break: keep-all;
+                    transition: all .5s;
+                    transform: rotateZ(0);
+                    cursor: pointer;
+                    text-align: left;
+                    font-weight: 600;
+                }
+
+                .buttonReveal {
+                    width: 0;
+                    background-color: transparent;
+                    color: white;
+                }
+            }
+        }
+
+        .textContent {
+            color: white;
+            font-size: 1.4rem;
+        }
+    }
+
+    .buttonContainer {
+        width: auto;
+        margin: 4em 3em;
+        gap: 1em;
+        transition: all 500ms;
+        justify-content: space-evenly;
+
+        button {
+            background-color: aliceblue;
+            color: black;
+            box-shadow: none;
+            outline: 1px solid;
+            width: 100%;
+            position: relative;
+
+            &:hover {
+                color: #00a2ff;
+            }
+        }
+
+        .activeTab {
+            background-color: #3d88cf;
+            color: white;
+
+            &:hover {
+                background-color: #bee2ff;
+            }
+        }
+
+    }
+
+    @media (max-width: 800px) {
+        .side-link {
+            display: none;
+        }
+
+        .videoContainer {
+            height: 70vh;
+        }
+
+        .hero {
+            height: 25em;
+            position: absolute;
+            top: 7%;
+
+            h1 {
+                font-size: large;
+            }
+        }
+
+        .fancyAccordion {
+            height: 100%;
+
+            .container {
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+                flex-direction: column;
+                padding: 1em;
+
+                .buttons {
+                    transform: rotateZ(-90deg);
+                    padding: 1em;
+                    margin: 0;
+                }
+
+                .buttonContent {
+                    margin-top: -2.5em;
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}

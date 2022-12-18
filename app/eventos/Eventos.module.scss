@@ -1,0 +1,119 @@
+.eventosContainer {
+    text-align: center;
+    color: white;
+    min-width: 500px;
+    margin-bottom: 2em;
+
+    .hero {
+        position: relative;
+        min-height: 30em;
+        background-color: rgba(35, 127, 202, 0.384);
+        margin-bottom: 4em;
+
+        .heroContent {
+            position: absolute;
+            bottom: 15%;
+            left: 10%;
+            right: 10%;
+            font-size: 3rem;
+        }
+    }
+}
+
+.eventDescription {
+    text-align: center;
+    color: white;
+    margin-bottom: 2em;
+    min-width: 500px;
+
+    .hero {
+        position: relative;
+        min-height: 30em;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.384);
+        margin-bottom: 2em;
+
+        .heroContent {
+            width: 50%;
+            padding-top: 10%;
+            padding-bottom: 2%;
+            font-size: xx-large;
+            margin: 0 auto;
+        }
+    }
+
+    .descriptionContainer {
+        padding: 5%;
+        width: 100%;
+
+        .info {
+            width: 30%;
+            color: black;
+            text-align: left;
+            padding-right: 2em;
+
+            span {
+                font-weight: 400;
+                padding: 1em;
+                line-height: 40px;
+            }
+
+            .addToCalendarButton {
+                height: 2.8em;
+                width: 100%;
+                outline: 1px solid black;
+                color: white;
+                border-radius: 3px;
+                font-size: 1.4rem;
+                font-weight: 700;
+                background-color: rgb(127, 163, 163);
+                text-align: center;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgb(115, 146, 146);
+                }
+            }
+
+        }
+
+        .description {
+            width: 70%;
+            color: black;
+            letter-spacing: 1px;
+            line-height: 30px;
+        }
+
+        .imageContainer {
+            position: relative;
+            height: 30em;
+            margin-left: 2em;
+        }
+
+    }
+
+    a {
+        padding: 1.2em 2.3em;
+        outline: 1px solid black;
+    }
+
+    @media (max-width: 700px) {
+        .descriptionContainer {
+            flex-direction: column;
+            padding: 1em;
+
+            .info {
+                width: 100%;
+            }
+
+            .description {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .imageContainer {
+                margin-left: 0;
+            }
+        }
+    }
+}

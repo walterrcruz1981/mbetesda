@@ -1,0 +1,50 @@
+.clasesContainer {
+    max-width: 1600px;
+    margin: 0 auto;
+
+    .headerImage {
+        position: relative;
+        height: 25em;
+        min-width: 500px;
+    }
+
+    .proposito {
+        gap: 2em;
+        margin: 2em 0;
+        padding: 0 1em;
+        height: 100%;
+        min-width: 500px;
+
+        .image {
+            width: 400px;
+            height: 400px;
+            position: relative;
+
+            margin: 0 auto;
+
+            img {
+                object-fit: contain;
+            }
+        }
+
+        .textContent {
+            width: 100%;
+
+            .description {
+                letter-spacing: 1px;
+                line-height: 1.6;
+            }
+        }
+    }
+
+    @media (max-width:700px) {
+        .proposito {
+            flex-direction: column;
+
+            .image {
+                width: 400px;
+                height: 400px;
+            }
+        }
+    }
+}

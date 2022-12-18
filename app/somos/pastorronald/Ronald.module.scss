@@ -1,0 +1,100 @@
+.ronaldContainer {
+    width: 100%;
+    margin: 1em;
+    line-height: 2.2em;
+    letter-spacing: 1px;
+
+    .hero {
+        background: linear-gradient(to right, #56bcff, #ffffff, #546ae9);
+        height: 38em;
+        width: 100%;
+        margin-bottom: 3em;
+        align-items: flex-end;
+        justify-content: center;
+        position: relative;
+
+        .heroContent {
+            position: absolute;
+            bottom: -1.8em;
+            width: 80%;
+            background-color: #141d2b;
+            height: 30em;
+            gap: 1.2em;
+            box-shadow: 1px 10px 30px rgba(0, 0, 0, .3);
+            color: white;
+
+            .heroImage {
+                flex: 1;
+                position: relative;
+                overflow: hidden;
+                height: 33em;
+                min-width: 20em;
+                box-shadow: 1px 10px 30px rgba(50, 118, 196, 0.3);
+                z-index: 1;
+            }
+
+            .textContent {
+                background-color: #3e3f44;
+                flex: 2;
+                padding: 1em;
+
+                p {
+                    color: white;
+                }
+            }
+
+            .social-links {
+                position: absolute;
+                bottom: 0;
+                padding: 1em;
+            }
+        }
+    }
+
+    .description {
+        width: 100%;
+        padding: 2em;
+
+        .innerImage {
+            position: relative;
+            float: left;
+            padding: 1em;
+        }
+
+        .innerImage2 {
+            position: relative;
+            float: right;
+            padding: 1em;
+        }
+    }
+
+
+    @media (max-width: 700px) {
+        margin: .5em 0;
+
+        img {
+            width: 100%;
+            float: none;
+        }
+
+        .hero {
+            height: 32em;
+
+            .heroContent {
+                position: relative;
+                align-items: flex-end;
+
+                .textContent {
+                    margin-bottom: 4em;
+                }
+
+                .heroImage {
+                    position: absolute;
+                    height: 20em;
+                    width: 10em;
+                    top: -2em;
+                }
+            }
+        }
+    }
+}

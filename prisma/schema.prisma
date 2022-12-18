@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Event {
+  id          String @id @default(cuid())
+  title       String @db.Char(255)
+  date        String
+  venue       String @db.Char(255)
+  location    String @db.Char(160)
+  description String @db.LongText
+  imageUrl    String
+}
+
+model HomeSlideShow {
+  id         String   @id @default(uuid())
+  buttonText String   @db.Char(100)
+  buttonLink String   @db.Char(200)
+  createdAt  DateTime @default(now())
+  imageUrl   String   @db.Char(250)
+}

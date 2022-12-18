@@ -1,0 +1,49 @@
+.contactoContainer {
+
+    .hero {
+        position: relative;
+        height: 35em;
+        width: 100%;
+        background: linear-gradient(to right, blue, white);
+
+        img {
+            z-index: 1;
+        }
+
+        .heroText {
+            position: absolute;
+            top: 60%;
+            left: 20%;
+            font-size: 4rem;
+            color: white;
+            z-index: 2;
+        }
+    }
+}
+
+.contactContainer {
+    .mapa {
+        width: 100%;
+    }
+
+    background-color: #f1faff;
+    gap: 2em;
+    text-align: left;
+    align-items: center;
+
+    .contactTextContent {
+        justify-content: flex-start;
+        width: 100%;
+    }
+}
+
+@media (max-width: 860px) {
+    .contactContainer {
+        flex-direction: column-reverse;
+        padding: 1em;
+
+        .mapa {
+            width: 100%;
+        }
+    }
+}

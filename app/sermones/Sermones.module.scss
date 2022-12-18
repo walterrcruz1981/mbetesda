@@ -1,0 +1,168 @@
+//description Layout
+.descriptionLayout {
+    width: 100%;
+    background-color: black;
+}
+
+
+//video card
+
+.videoCardContainer {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    justify-content: flex-start;
+
+    .imageContainer {
+        position: relative;
+        height: 175px;
+        width: 100%;
+        z-index: 11;
+
+        img {
+            overflow: hidden;
+            border-radius: 9px;
+        }
+    }
+
+    .infoContent {
+        width: 100%;
+        min-height: 100px;
+
+
+        .titleContent {
+            z-index: 10;
+            justify-content: flex-start;
+            gap: 1em;
+            padding-left: .6em;
+
+            .avatar {
+                position: relative;
+                height: 2em;
+                min-width: 2em;
+                margin-top: 1em;
+                border-radius: 50%;
+                overflow: hidden;
+                padding: 2px;
+                box-shadow: -2px 1px 4px black;
+                animation: rotation 10s infinite linear;
+
+                img {
+                    z-index: 2;
+                }
+            }
+
+            @keyframes rotation {
+                from {
+                    transform: rotateY(0deg);
+                }
+
+                to {
+                    transform: rotateY(359deg);
+                }
+            }
+        }
+    }
+}
+
+.sermonesContainer {
+    min-width: 500px;
+    padding: 1em 1em;
+}
+
+//Sermones Description 
+.sermonesDescriptionContainer {
+    min-width: 500px;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 1em;
+    background-color: black;
+}
+
+//playback component
+.playbackContainer {
+    max-width: 70em;
+    margin: 0 auto;
+    min-width: 500px;
+    color: white;
+    line-height: 1.3em;
+    padding: 1em 1em;
+
+    h4 {
+        color: rgba(255, 255, 255, 0.452);
+    }
+
+    iframe {
+        height: 44em;
+        width: 100%;
+    }
+
+    @media (max-width: 700px) {
+        iframe {
+            height: 26em;
+            min-width: 400px;
+            padding: 0 0;
+        }
+    }
+}
+
+//nextSteps component
+.nextStepsContainer {
+    max-width: 70em;
+    margin: 1em auto;
+    color: white;
+    background-color: black;
+    min-width: 500px;
+    padding: 0 1em;
+
+    .cardsContainer {
+        max-width: 90em;
+
+
+        .detailCard {
+            position: relative;
+            border-radius: .6em;
+            overflow: hidden;
+            width: 100%;
+            height: 10em;
+            color: white;
+            z-index: 1;
+
+            h3 {
+                background-color: rgba(0, 0, 0, 0.664);
+            }
+
+            img {
+                filter: brightness(1.5);
+            }
+        }
+    }
+}
+
+//recentSermons component
+.recentContainerWrapper {
+    background-color: rgb(65, 64, 64);
+    color: white;
+}
+
+.recentSermonsContainer {
+    flex-direction: column;
+    row-gap: 1em;
+    max-width: 70em;
+    margin: 0 auto;
+    padding: 0 1em;
+
+    a {
+        &:hover {
+            color: white;
+        }
+    }
+
+    .link {
+        border: 1px solid black;
+        padding: 1em;
+        width: 10em;
+        margin: 0 auto;
+        background-color: white;
+    }
+}

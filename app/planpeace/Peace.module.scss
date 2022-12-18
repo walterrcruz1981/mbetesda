@@ -1,0 +1,365 @@
+//Peace Home Page
+.peaceContainer {
+    max-width: 1600px;
+    margin: 0 auto;
+    min-width: 500px;
+
+    .banner {
+        height: 44em;
+        width: 100%;
+        background-image: url('https://images.unsplash.com/photo-1495556650867-99590cea3657?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: -600px;
+        position: relative;
+
+        img {
+            opacity: .5;
+            z-index: 1;
+            filter: sepia(80.4%);
+        }
+    }
+
+    .buttonContainer {
+        width: 100%;
+        height: 2em;
+        background: linear-gradient(to right, #e7e8e9, #26a8c9);
+        gap: 1em;
+        font-size: 2em;
+        top: 0;
+        position: sticky;
+        z-index: 99;
+
+        a {
+            color: black;
+        }
+    }
+
+    @media (max-width: 880px) {
+        .banner {
+            width: 100%;
+            height: 25em;
+        }
+
+        .buttonContainer {
+            font-size: 1rem;
+            justify-content: space-around;
+        }
+    }
+
+    @media (max-width: 580px) {
+        .banner {
+            width: 100%;
+            height: 16em;
+        }
+
+        .buttonContainer {
+            font-size: 1rem;
+            justify-content: space-around;
+        }
+    }
+
+}
+
+//Cinco Gigantes Component
+.gigantesContainer {
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+
+    .linksContainer {
+        margin-top: 2em;
+        background-color: #26a8c9;
+        text-align: center;
+
+        .links {
+            flex-direction: column;
+            width: 60%;
+            padding: 1em 1em;
+            cursor: pointer;
+
+            .title {
+                cursor: pointer;
+                font-size: .9rem;
+
+                &:hover {
+                    color: #2b5f8a;
+                    text-decoration: underline;
+                }
+            }
+
+            .activeTitle {
+                color: #cfcfcf;
+                text-decoration: underline;
+            }
+        }
+
+        .description {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+
+            .image {
+                background-color: #1c8f8580;
+                height: 35em;
+                width: 100%;
+                transform: scale(.9);
+                position: relative;
+
+                img {
+                    object-fit: cover;
+                }
+            }
+
+            p {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                line-height: 1.5em;
+                letter-spacing: 1px;
+                background-color: white;
+                padding: 2em 1em;
+                box-shadow: inset 2px 2px 2px black;
+            }
+        }
+    }
+
+    .bottomContainer {
+        padding: 2em;
+        line-height: 1.7em;
+        column-gap: 1em;
+        flex-direction: column;
+        row-gap: 1.4em;
+        text-align: center;
+        width: 100%;
+        margin: 4em 0;
+        background-image: url('https://images.unsplash.com/flagged/photo-1572213426852-0e4ed8f41ff6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80');
+        background-attachment: fixed;
+        background-size: cover;
+        height: 60vh;
+
+        .textContent {
+            width: 70%;
+            background: linear-gradient(to bottom, white, #c5c5c5a6);
+            padding: 3em 4em;
+            font-weight: 600;
+        }
+    }
+
+    @media (max-width: 880px) {
+
+        .linksContainer {
+            .links {
+                padding: 0;
+                margin: 0;
+            }
+
+            .image {
+                transform: scale(1);
+            }
+
+            flex-direction: column;
+
+            .description {
+                flex-direction: column;
+                overflow: hidden;
+                height: auto;
+
+                p {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .bottomContainer {
+            background-color: red;
+            width: 100%;
+            height: 40em;
+
+            .textContent {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+}
+
+
+//Estrategia Component
+.estrategiaContainer {
+    padding: 2em 0;
+
+    .intro {
+        font-size: 1.5rem;
+        font-weight: 700;
+        width: 60%;
+        padding-bottom: 1em;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .infoContainer {
+        background-color: rgba(6, 146, 227, 0.644);
+        margin-top: 2em;
+        gap: 1em;
+        padding: 1em;
+
+        .accordionContainer {
+            width: 100%;
+            margin: 2em auto;
+
+            .eachAccordion {
+                padding: 1.5em 1em 0 1em;
+                margin: 0 1em;
+                flex-direction: column;
+                width: 98%;
+                height: auto;
+
+                .title {
+                    font-weight: 600;
+                    color: white;
+                    cursor: pointer;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    span {
+                        font-size: 1.7em;
+                    }
+
+                    &:hover {
+                        color: blue;
+                        outline: 1px solid white;
+                        padding-left: 1em;
+                        transition: padding 500ms ease;
+                    }
+                }
+
+                .description {
+                    line-height: 1.4em;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: all 500ms ease-out;
+                }
+
+                .active {
+                    max-height: 100%;
+                    height: auto;
+                    transition: all 500ms ease-in-out;
+                    text-decoration: none;
+                    color: white;
+                    box-shadow: inset 1px 10px 10px #00000067;
+                    padding: 1em 1em;
+                }
+
+            }
+        }
+
+        .descriptionText {
+            width: 100%;
+            line-height: 1.6em;
+
+            .sidText {
+                color: white;
+                align-items: stretch;
+                flex: 1;
+                padding: 1em 2em;
+            }
+        }
+
+        @media (max-width: 800px) {
+            flex-direction: column;
+
+            .accordionContainer {
+                border-right: none;
+                grid-template-columns: 1fr;
+                grid-row-gap: .1em;
+            }
+        }
+
+    }
+}
+
+//Plan Component
+.planContainer {
+    padding: 2em 1em 0;
+
+    .introText {
+        background-color: #3286a7;
+        margin: 0 auto;
+        padding: 4em 2em;
+        min-height: 20em;
+        gap: 1em;
+        text-align: center;
+        font-size: x-large;
+        color: white;
+    }
+
+    .cardsContainer {
+        gap: 1em;
+
+        .card {
+            position: relative;
+            margin: 2em;
+
+            .imageContainer {
+                width: 100%;
+                height: 44em;
+                background-color: rgb(0, 0, 0);
+                z-index: -1;
+
+                img {
+                    object-fit: cover;
+                }
+            }
+
+            .cardContent {
+                background-color: #2693d3c7;
+                padding: 2em;
+                color: #ffffffce;
+                font-size: x-large;
+
+                .cardTitle {
+                    margin: 1em 1em;
+                    z-index: 1;
+                }
+
+            }
+
+        }
+    }
+
+    @media (max-width: 800px) {
+        .introText {
+            flex-direction: column;
+            background-color: #5c5c5c;
+            padding: 1em 1em;
+        }
+
+        .cardsContainer {
+            .card {
+                flex-direction: column;
+                margin-bottom: 1.5em;
+                padding-top: 1em;
+                border-top: 1px solid black;
+                height: 100%;
+
+                .imageContainer {
+                    width: 100%;
+                    height: 14em;
+                }
+
+                .cardContent {
+                    text-align: center;
+                    color: #ffffffce;
+
+                    .cardTitle {
+                        margin: 1em 1em;
+
+                    }
+                }
+
+            }
+        }
+
+    }
+}

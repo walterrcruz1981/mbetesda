@@ -1,0 +1,63 @@
+.donacionesContainer {
+    position: relative;
+
+    .heroSection {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+
+        img {
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .textContent {
+            color: white;
+            width: 50%;
+            text-align: center;
+
+            h3 {
+                font-size: 2.7rem;
+                font-weight: 700;
+                margin-bottom: .6em;
+            }
+
+            p {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+                color: white;
+            }
+        }
+    }
+
+    .giveContainer {
+        width: 51%;
+        margin: 0 auto;
+        background: linear-gradient(to bottom, #00000034, white, #ffffff);
+        backdrop-filter: blur(1em);
+    }
+
+    @media (max-width: 900px) {
+        .heroSection {
+            height: 30em;
+
+            .textContent {
+                width: 90%;
+
+                h3 {
+                    font-size: 1.8rem;
+                }
+
+                p {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        .giveContainer {
+            width: 90%;
+        }
+    }
+}

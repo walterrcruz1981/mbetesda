@@ -1,0 +1,163 @@
+//layout commponent
+.restrictedContainer {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.459);
+    position: relative;
+    min-height: 100vh;
+    min-width: 500px;
+
+    a {
+        color: white;
+        outline: 1px solid white;
+        margin: 1em;
+        padding: 1em;
+
+        &:hover {
+            padding: 2em;
+        }
+    }
+
+    hr {
+        width: 100%;
+        height: .1em;
+    }
+
+    .avatar {
+        position: relative;
+        height: 10em;
+        width: 10em;
+        border-radius: 50%;
+        overflow: hidden;
+        opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+        height: 40em;
+    }
+}
+
+//crear  component
+.crearContainer {
+    width: 100vw;
+    text-align: center;
+
+    img {
+        opacity: 1;
+    }
+
+    .createFormContainer {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 255, 0.507);
+        padding: 5% 5%;
+        color: white;
+
+        .form {
+            align-items: flex-start;
+            width: 100%;
+            background-color: rgb(99, 12, 12);
+            margin: 0 auto;
+            row-gap: .5em;
+            padding: 1em;
+
+            input {
+                min-width: 20%;
+                height: 2.5em;
+                outline: none;
+            }
+        }
+
+
+        .preview {
+            text-align: center;
+            overflow: hidden;
+            min-height: 25em;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            color: #103a52;
+
+            .imageContainer {
+                position: relative;
+                height: 25em;
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    z-index: 1;
+                    opacity: 1;
+                }
+
+
+            }
+
+            .slideImageContainer {
+                height: 44em;
+                width: 100%;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    z-index: 1;
+                    opacity: 1;
+                }
+
+                button {
+                    position: absolute;
+                    bottom: 10%;
+                    transform: translate(-50%);
+                    background-color: red;
+                    color: white;
+                    font-weight: 700;
+                }
+
+                @media (max-width: 800px) {
+                    height: 30em;
+                }
+            }
+        }
+    }
+
+    .currentEventsContainer {
+        button {
+            background-color: red;
+            color: white;
+            font-weight: 700;
+            box-shadow: none;
+
+            &:hover {
+                font-size: .7em;
+            }
+        }
+    }
+
+    .currentObjects {
+        .eachObject {
+            position: relative;
+            min-height: 25em;
+            width: 100%;
+            padding: 1em;
+
+            input {
+                position: absolute;
+                width: 25%;
+                background-color: red;
+                outline: none;
+                color: white;
+                font-weight: 700;
+                height: 2em;
+                margin-top: 1em;
+
+                &:hover {
+                    height: 3em;
+                }
+            }
+
+            button {
+                align-items: center;
+                margin-top: 25%;
+                width: 25%;
+            }
+        }
+    }
+
+}
