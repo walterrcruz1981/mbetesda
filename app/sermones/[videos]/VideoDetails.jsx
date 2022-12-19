@@ -7,10 +7,14 @@ import RecentSermons from './RecentSermons'
 
 
 async function VideoDetail({ id }) {
-    const response = await fetch('http://localhost:3000/api/sermones').then(res => res.json())
-    const [video1, video2, video3] = response;
+
+    const url = 'https://youtube.googleapis.com/youtube/v3/search?&part=snippet&channelId=UC8br10Qoo5bZvTKiJhPkdOA&order=date&maxResults=20&key=';
+
+    const response = await fetch(`${url + process.env.YOUTUBE_API}`)
+        .then(res => res.json())
+    const [video1, video2, video3] = response.items;
     const recentSermons = [video1, video2, video3]
-    const filteredData = response.filter(video => video.id.videoId === id)
+    const filteredData = response.items.filter(video => video.id.videoId === id)
     return (
         <div className={styles.sermonesDescriptionContainer}>
             <PlayBack content={filteredData[0]} id={id} />

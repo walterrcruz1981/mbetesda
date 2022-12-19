@@ -4,11 +4,14 @@ import VideoCard from './VideoCard';
 import styles from './Sermones.module.scss'
 
 async function Sermones() {
-    const videos = await fetch('http://localhost:3000/api/sermones')
-        .then(res => res.json());
+
+    const url = 'https://youtube.googleapis.com/youtube/v3/search?&part=snippet&channelId=UC8br10Qoo5bZvTKiJhPkdOA&order=date&maxResults=20&key=';
+    const videos = await fetch(`${url + process.env.YOUTUBE_API}`)
+        .then(res => res.json())
+    console.log(videos.items, 'response from sermones page');
     return (
         <div className={styles.sermonesContainer + ' responsive-grid'}>
-            {videos?.map((video, index) => {
+            {videos.items?.map((video, index) => {
                 const { id = {}, snippet = {} } = video;
                 const { title, description, publishedAt, thumbnails = {} } = snippet;
                 const { url } = thumbnails.medium;
