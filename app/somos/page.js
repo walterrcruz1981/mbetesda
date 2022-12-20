@@ -70,7 +70,7 @@ function Somos() {
                     || multiTab === 1 ? <ManyInfoTab tabContent={valores}></ManyInfoTab> : null
                         || multiTab === 2 ? <ManyInfoTab tabContent={declaracion}></ManyInfoTab> : null
             }
-            <Suggestions />
+            {/* <Suggestions /> */}
         </div>
     )
 }

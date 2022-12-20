@@ -7,7 +7,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Link from 'next/link';
 
+
 function HomeSlideShow({ content }) {
+
     return (
         <div className={styles.slideShow}>
             <Swiper

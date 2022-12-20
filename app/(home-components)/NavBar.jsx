@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 function NavBar() {
     return (
-        <div className={styles.navbarContainer + ' flex-center'}>
+        <div className={styles.navbarContainer + ' flex'}>
             <div className={styles.logo}>
                 <Link href={'/'}>{MyImage(logo)}</Link>
             </div>

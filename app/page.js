@@ -4,7 +4,8 @@ import HomeSlideShow from './(home-components)/HomeSlideShow'
 import LinkCard from './components/cards/LinkCard'
 import { infoCardsContent, connectionCard } from './homeContent'
 import prisma from './data/prisma'
-async function Home() {
+
+const getData = async () => {
     const data = await prisma.HomeSlideShow.findMany({
         select: {
             id: true,
@@ -12,7 +13,14 @@ async function Home() {
             buttonLink: true,
             imageUrl: true
         }
-    });
+
+    })
+    return data
+};
+
+
+export default async function Home() {
+    const data = await getData()
     return (
         <div className={styles.homeContainer}>
             <HomeSlideShow content={data} />
@@ -26,4 +34,3 @@ async function Home() {
     )
 }
 
-export default Home
