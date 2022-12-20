@@ -1,8 +1,6 @@
 //home page
 .homeContainer {
     max-width: 1600px;
-    min-width: 500px;
-    margin: 0 auto;
 
     .connectionContainer {
         margin: 2em auto;
@@ -18,7 +16,7 @@
     background-color: rgb(255, 255, 255);
     justify-content: space-between;
     max-width: 1600px;
-    min-width: 500px;
+
     margin: 2em auto;
     padding: 0 1em;
     z-index: 100;
@@ -36,13 +34,13 @@
 
     @media(max-width: 800px) {
         flex-direction: column;
+        align-items: center;
     }
 }
 
 //Links component
 .links {
-    text-align: center;
-    margin-right: 2em;
+    margin-right: 3em;
     z-index: 100;
 
     ul {
@@ -59,7 +57,6 @@
 .footerContainer {
     height: 15em;
     background-color: rgba(0, 0, 0, 0.822);
-    min-width: 500px;
 
     a {
         color: rgb(138, 231, 243);

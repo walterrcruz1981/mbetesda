@@ -32,7 +32,7 @@ function Somos() {
     return (
         <div className={styles.somosContainer}>
             <div className={styles.videoContainer}>
-                <iframe width='1000px' height='500px' src="https://www.youtube.com/embed/RNpSGefqTE0?controls=0&autoplay=1&mute=1&playsinline=1&playlist=RNpSGefqTE0&loop=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <iframe width='1000px' height='500px' src="https://www.youtube.com/embed/RNpSGefqTE0?controls=0&autoplay=1&mute=1&playsinline=1&playlist=RNpSGefqTE0&loop=1" title="YouTube video player" allowFullScreen></iframe>
             </div>
             <div className={styles.hero + ' flex-center-column'}>
 

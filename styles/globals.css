@@ -9,6 +9,12 @@ body {
 
 * {
   box-sizing: border-box;
+
+}
+
+.layoutContainer {
+  min-width: 500px;
+  overflow-x: hidden;
 }
 
 a {
@@ -85,7 +91,7 @@ button:hover {
 }
 
 .responsive-grid-small {
-  gap: .8em;
+  gap: .2em;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(225px, 2fr));

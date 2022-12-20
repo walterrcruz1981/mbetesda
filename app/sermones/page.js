@@ -8,7 +8,6 @@ async function Sermones() {
     const url = 'https://youtube.googleapis.com/youtube/v3/search?&part=snippet&channelId=UC8br10Qoo5bZvTKiJhPkdOA&order=date&maxResults=20&key=';
     const videos = await fetch(`${url + process.env.YOUTUBE_API}`)
         .then(res => res.json())
-    console.log(videos.items, 'response from sermones page');
     return (
         <div className={styles.sermonesContainer + ' responsive-grid'}>
             {videos.items?.map((video, index) => {

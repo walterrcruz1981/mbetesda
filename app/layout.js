@@ -9,9 +9,13 @@ export default function RootLayout({ children }) {
       <head />
       <body>
         <MyProviders>
-          <NavBar />
-          {children}
-          <Footer />
+
+          <div className='layoutContainer'>
+            <NavBar />
+            {children}
+            <Footer />
+          </div>
+
         </MyProviders>
       </body>
     </html>

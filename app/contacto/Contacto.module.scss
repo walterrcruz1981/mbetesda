@@ -1,13 +1,14 @@
 .contactoContainer {
+    background-color: black;
 
     .hero {
         position: relative;
         height: 35em;
-        width: 100%;
         background: linear-gradient(to right, blue, white);
 
         img {
             z-index: 1;
+            opacity: .4;
         }
 
         .heroText {

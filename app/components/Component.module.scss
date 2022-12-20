@@ -6,7 +6,7 @@
     border-radius: 8px;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.26);
-    margin-right: .4em;
+    margin-right: .45em;
 
     .cardContent {
         width: 70%;
@@ -28,6 +28,7 @@
             }
         }
     }
+
 }
 
 //styles for Modal
@@ -165,7 +166,6 @@
 // styles for Tab
 .tabContainer {
     min-height: 25em;
-    min-width: 500px;
     margin: 2em 0;
 
     .choices {
@@ -205,7 +205,6 @@
 .suggestionsContainer {
     min-height: 20em;
     background-color: rgba(255, 255, 255, 0.822);
-    min-width: 500px;
     z-index: 2;
 
     .links {

@@ -6,6 +6,7 @@ function Links() {
         <div className={styles.links}>
             <ul className='flex-center'>
                 <Link href={'/'}>Home</Link>
+                <Link href={'/somos'}>Somos</Link>
                 <Link href={'/sermones'}>Sermones</Link>
                 <Link href={'/planpeace'}>Plan Peace</Link>
                 <Link href={'/contacto'}>Contacto</Link>
