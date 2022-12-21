@@ -2,11 +2,9 @@
 import React, { useState } from 'react'
 import Modal from '../components/Modal'
 import styles from './Somos.module.scss'
-import { propositos, propositosUnicos, valores, declaracion, heroContent } from './somosContent'
-import Image from 'next/image'
+import { propositos, propositosUnicos, valores, declaracion } from './somosContent'
 import ManyInfoTab from '../components/tabs/ManyInfoTab'
-import { imageSize } from '../variables'
-import Suggestions from '../components/Suggestions'
+import { MyImage } from '../variables'
 
 function Somos() {
     const bgVideo = 'https://dih6tqxrn8ffv.cloudfront.net/Bienvenidos a casa.mov'
@@ -16,18 +14,11 @@ function Somos() {
     }
     const [selected, setSelected] = useState(0)
     const [openModal, setOpenModal] = useState(false)
-    const [openLink, setOpenLink] = useState(false)
     const [multiTab, setMultiTab] = useState(0)
     const choiceButtons = [
         { title: 'Proposito', id: 0 },
         { title: 'Valores', id: 1 },
         { title: 'Declaracion', id: 2 }
-    ]
-    const moreInfoSideLink = [
-        { title: 'Pastor General', href: '/somos/ronald', id: '0' },
-        { title: 'Grupos Pequeños', href: '/conectate/grupos', id: '1' },
-        { title: 'Clases', href: '/conectate/clases', id: '2' },
-        { title: 'Contacto', href: '/contacto', id: '3' },
     ]
     return (
         <div className={styles.somosContainer}>
@@ -36,7 +27,6 @@ function Somos() {
             </div>
             <div className={styles.hero + ' flex-center-column'}>
 
-                {/* <Image fill src={heroContent.imageUrl} sizes={imageSize} priority alt='hero-image' /> */}
                 <h1>Bienvenido<br></br><span>A Ministerios Betesda</span></h1>
                 <button onClick={() => setOpenModal(true)}>play video</button>
             </div>
@@ -53,7 +43,7 @@ function Somos() {
                     </div>
                     {propositos?.map((item, index) => (
                         <div key={index} className={styles.textContent}>
-                            {selected === index ? <Image fill sizes={imageSize} src={item.imageUrl} priority alt={item.title} /> : null}
+                            {selected === index ? MyImage(item.imageUrl) : null}
                             <h1>{selected === index ? item.title : null}</h1>
                             <p>{selected === index ? item.description : null} </p>
                         </div>
@@ -70,7 +60,6 @@ function Somos() {
                     || multiTab === 1 ? <ManyInfoTab tabContent={valores}></ManyInfoTab> : null
                         || multiTab === 2 ? <ManyInfoTab tabContent={declaracion}></ManyInfoTab> : null
             }
-            {/* <Suggestions /> */}
         </div>
     )
 }

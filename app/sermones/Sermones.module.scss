@@ -63,6 +63,12 @@
             }
         }
     }
+
+    @media (max-width: 600px) {
+        .imageContainer {
+            height: 300px;
+        }
+    }
 }
 
 .sermonesContainer {
