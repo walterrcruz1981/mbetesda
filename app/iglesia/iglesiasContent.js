@@ -1,9 +1,9 @@
-const elSalvadorFlag = '../public/images/flags/elSalvadorFlag.png'
-const usaFlag = '../public/images/flags/usaFlag.png'
-const mexicoFlag = '../public/images/flags/mexicoFlag.png'
-const pastorSalinaCruz = '../public/images/pastores/pastorjoel-salinas-cruz.jpeg'
-const pastorTehuantepec = '../public/images/pastores/pastorJuanCarlos.jpeg'
-const pastorApopa = '../public/images/pastores/pastorApopa.jpg'
+const elSalvadorFlag = '/../public/images/flags/elSalvadorFlag.png'
+const usaFlag = '/../public/images/flags/usaFlag.png'
+const mexicoFlag = '/../public/images/flags/mexicoFlag.png'
+const pastorSalinaCruz = '/../public/images/pastores/pastorjoel-salinas-cruz.jpeg'
+const pastorTehuantepec = '/../public/images/pastores/pastorJuanCarlos.jpeg'
+const pastorApopa = '/../public/images/pastores/pastorApopa.jpg'
 
 
 export const iglesiasInfo = [

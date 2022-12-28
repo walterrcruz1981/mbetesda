@@ -10,9 +10,6 @@ function Media() {
     const heroImage = 'https://images.unsplash.com/photo-1612043071344-94c20c4c837e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80';
     return (
         <div className={styles.mediaContainer + ' flex-center-column'}>
-            <div className={styles.bgImage + " flex-center-column"}>
-                {MyImage(heroImage)}
-            </div>
             <div className={styles.heroText}>
                 <h1>{content.title}</h1>
                 <p>{content.intro}</p>

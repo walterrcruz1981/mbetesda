@@ -1,28 +1,35 @@
-import Link from 'next/link'
 import React from 'react'
-import VideoCard from './VideoCard';
 import styles from './Sermones.module.scss'
+import PlayList from './PlayList';
+const url = 'https://youtube.googleapis.com/youtube/v3/playlists?&part=snippet,id,contentDetails&channelId=UC8br10Qoo5bZvTKiJhPkdOA&order=date&maxResults=10&key=';
+
+const getPlaylist = async () => {
+    const playlist = await fetch(`${url + process.env.YOUTUBE_API}`, { next: { revalidate: 10 } })
+    return playlist.json();
+}
 
 async function Sermones() {
+    const playListsVideos = await getPlaylist()
 
-    const url = 'https://youtube.googleapis.com/youtube/v3/search?&part=snippet&channelId=UC8br10Qoo5bZvTKiJhPkdOA&order=date&maxResults=20&key=';
-    const videos = await fetch(`${url + process.env.YOUTUBE_API}`)
-        .then(res => res.json())
     return (
-        <div className={styles.sermonesContainer + ' responsive-grid'}>
-            {videos.items?.map((video, index) => {
-                const { id = {}, snippet = {} } = video;
-                const { title, description, publishedAt, thumbnails = {} } = snippet;
-                const { url } = thumbnails.medium;
-                const videoData = {
-                    id: id.videoId,
-                    title: title,
-                    description: description,
-                    publishedAt: publishedAt,
-                    imageUrl: url
-                }
-                return <Link key={index} href={'/sermones/' + id.videoId}><VideoCard content={videoData} /></Link>
+        <div className={styles.sermonesContainer}>
+            {playListsVideos.items?.map((list, index) => {
+                const { id, contentDetails, snippet = {} } = list;
+                const { title } = snippet;
+                return (
+                    <div className={index % 2 ? styles.playListContainer : ''} key={id} >
+                        <h1>{title}</h1>
+                        <p>{contentDetails.itemCount} {contentDetails.itemCount < 2 ? 'Video' : 'Videos'}</p>
+                        <div className={styles.playList + 'responsive-grid-large'}>
+                            <PlayList id={id} />
+                        </div>
+                        <hr />
+                    </div>
+                )
+
             })}
+
+
         </div>
     )
 }

@@ -9,9 +9,13 @@
 
 .videoCardContainer {
     height: 100%;
-    width: 100%;
+    max-width: 600px;
     overflow: hidden;
     justify-content: flex-start;
+
+    &:hover {
+        color: rgb(97, 138, 212);
+    }
 
     .imageContainer {
         position: relative;
@@ -30,11 +34,14 @@
         min-height: 100px;
 
 
+
         .titleContent {
             z-index: 10;
             justify-content: flex-start;
             gap: 1em;
             padding-left: .6em;
+
+
 
             .avatar {
                 position: relative;
@@ -71,9 +78,16 @@
     }
 }
 
+//sermones container
 .sermonesContainer {
     min-width: 500px;
     padding: 1em 1em;
+
+    .playListContainer {
+
+        background-color: aliceblue;
+    }
+
 }
 
 //Sermones Description 
@@ -86,18 +100,19 @@
 
 //playback component
 .playbackContainer {
-    max-width: 70em;
+    max-width: 80vw;
     margin: 0 auto;
     color: white;
     line-height: 1.6em;
     padding: 1em 1em;
+
 
     h4 {
         color: rgba(255, 255, 255, 0.452);
     }
 
     iframe {
-        height: 44em;
+        height: 70vh;
         width: 100%;
     }
 
@@ -153,12 +168,6 @@
     max-width: 70em;
     margin: 0 auto;
     padding: 0 1em;
-
-    a {
-        &:hover {
-            color: white;
-        }
-    }
 
     .link {
         border: 1px solid black;

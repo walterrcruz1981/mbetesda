@@ -1,8 +1,7 @@
-'use client'
+
 import React from 'react'
 import styles from './Sermones.module.scss'
 import { MyImage } from '../variables'
-import TimeAgo from 'react-timeago'
 
 function VideoCard({ content }) {
     const avatar = 'https://yt3.googleusercontent.com/ytc/AMLnZu_SlXJycaUlJ8xrty-TXQ0EdJSVXb1XNDwlNwPltA=s88-c-k-c0x00ffffff-no-rj'
@@ -17,9 +16,7 @@ function VideoCard({ content }) {
                         {MyImage(avatar)}
                     </div>
                     <div>
-                        <p>Publicado hace: <TimeAgo date={content.publishedAt} /></p>
                         <h3>{content.title}</h3>
-                        <p>{content.description}</p>
                     </div>
 
                 </div>
