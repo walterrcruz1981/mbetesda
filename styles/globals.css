@@ -9,6 +9,11 @@ body {
 
 * {
   box-sizing: border-box;
+
+}
+
+.main-layout {
+  min-width: 300px;
 }
 
 a {
@@ -85,10 +90,10 @@ button:hover {
 }
 
 .responsive-grid-small {
-  gap: .8em;
+  gap: .2em;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(225px, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
 }
 
 .responsive-grid {
@@ -107,8 +112,7 @@ button:hover {
   gap: 1.2em;
   width: 100%;
   display: grid;
-  padding: .1em 1em;
-  grid-template-columns: repeat(auto-fit, minmax(475px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 @media (prefers-color-scheme: dark) {

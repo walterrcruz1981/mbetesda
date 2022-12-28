@@ -1,9 +1,10 @@
-import React from 'react'
+
 import Suggestions from '../../components/Suggestions'
 import { MyImage } from '../../variables'
 import styles from './Ronald.module.scss'
 import { biography } from './ronaldContent'
-function page() {
+
+export default function Page() {
     return (
         <div className={styles.ronaldContainer}>
             <h1>Biografia</h1>
@@ -27,4 +28,3 @@ function page() {
     )
 }
 
-export default page

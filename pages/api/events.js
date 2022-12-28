@@ -10,8 +10,9 @@ export default async function handler(req, res) {
         })
         res.json({ message: 'event created' })
     } else if (req.method === 'GET') {
-        const data = await prisma.event.findMany();
-        res.status(200).json(data)
+        const result = await prisma.event.findMany();
+
+        res.status(200).json(result)
     } else if (req.method === 'DELETE') {
         const deleteEvent = JSON.parse(req.body)
         const eventToDelete = await prisma.event.delete({

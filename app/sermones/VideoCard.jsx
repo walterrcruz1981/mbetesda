@@ -1,6 +1,8 @@
+
 import React from 'react'
 import styles from './Sermones.module.scss'
 import { MyImage } from '../variables'
+
 function VideoCard({ content }) {
     const avatar = 'https://yt3.googleusercontent.com/ytc/AMLnZu_SlXJycaUlJ8xrty-TXQ0EdJSVXb1XNDwlNwPltA=s88-c-k-c0x00ffffff-no-rj'
     return (
@@ -15,7 +17,6 @@ function VideoCard({ content }) {
                     </div>
                     <div>
                         <h3>{content.title}</h3>
-                        <p>{content.description}</p>
                     </div>
 
                 </div>

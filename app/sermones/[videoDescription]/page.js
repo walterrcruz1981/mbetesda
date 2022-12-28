@@ -2,12 +2,10 @@ import React from 'react'
 import VideoDetails from './VideoDetails'
 
 
-async function DetailsPage({ params }) {
-    const videoId = params.videos;
-
+function DetailsPage({ params }) {
     return (
         <div>
-            <VideoDetails id={videoId} />
+            <VideoDetails id={params.videoDescription} />
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../Home.module.scss'
+import styles from './homeComponents.module.scss'
 import logo from '../../public/images/logo/logo2.png'
 import { MyImage } from '../variables'
 import Links from './Links'

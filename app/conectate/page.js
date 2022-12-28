@@ -1,9 +1,9 @@
-import React from 'react'
 
-function Conectate() {
+
+export default async function Conectate() {
+
     return (
         <div>Conectate</div>
     )
 }
 
-export default Conectate
