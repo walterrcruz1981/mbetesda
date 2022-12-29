@@ -18,19 +18,11 @@ const getSlideShowData = async () => {
     return data
 };
 
-const getLiveYouTube = async () => {
-    const fetchData = await fetch('http://localhost:3000/api/youtubelive', { cache: 'no-store' })
-
-    return fetchData.json()
-}
-
-
 export default async function Home() {
     const slideShowData = await getSlideShowData()
-    const liveFeed = await getLiveYouTube()
     return (
         <div className={styles.homeContainer}>
-            <HomeSlideShow slideContent={slideShowData} liveFeedContent={liveFeed} />
+            <HomeSlideShow slideContent={slideShowData} />
             <div className={styles.connectionContainer + " responsive-grid-large"}>
                 {connectionCard?.map((card, index) => (<LinkCard key={index} content={card} />))}
             </div>
