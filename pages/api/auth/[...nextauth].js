@@ -3,6 +3,8 @@ import GithubProvider from "next-auth/providers/github"
 import GoogleProvider from "next-auth/providers/google";
 
 export const authOptions = {
+
+    site: process.env.SITE || 'http://localhost:3000',
     // Configure one or more authentication providers
     providers: [
         GithubProvider({
